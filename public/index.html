@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    <title>CN320 Project: Engineering Project</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+        background-color: #f0f0f0;
+        width: 750px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #content {
+        float: left;
+        background-color: white;
+        border: 3px solid #aaa;
+        border-top: none;
+        padding: 25px;
+        width: 100%;
+      }
+
+      #sidebar {
+        float: right;
+        width: 175px;
+      }
+
+      #footer {
+        clear: both;
+      }
+
+      #header, #about, #getting-started {
+        padding-left: 75px;
+        padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+
+      <div id="content">
+        <div id="header">
+          <h1>CN320 Project</h1>
+          <h2>Engineering Library</h2>
+        </div>
+
+        <div id="about">
+          <h3>ระบบยืม-คืนหนังสือห้องสมุด คณะวิศวกรรมศาสตร์</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <h1>รายชื่อสมาชิก</h1>
+          <h2>1. นายธีร์ธวัช ตังคจิวางกูร เลขทะเบียน 5210612361<br>
+          2. นายศิรา ทวีกิจไพบูลย์ เลขทะเบียน 5210611967<br>
+          3. นายวิทยา ศิริพร เลขทะเบียน 5210530019<br>
+          4. นางสาวแก้ววิมล มุขสมบัติ เลขทะเบียน 5210611454<br>
+          5. นางสาวชัชชฎา ตันพิบูลย์วงศ์ เลขทะเบียน 5210611918<br>
+          6. นายณัฐพงษ์ ทีฆายุภักดิ์ เลขทะเบียน 5210611314</h2>
+
+          <ol>
+            <li>
+              <h2>สรุปการเก็บ Requirement ระบบยืม-คืนหนังสือ ครั้งที่ 1 (17 มกราคม 2556)</h2>
+              <p>1. ลูกค้าต้องการให้สร้างระบบยืม-คืนได้สะดวก, รวดเร็วกว่าระบบเดิมที่ใช้แผ่นกระดาษจดเก็บสถิติการยืม-คืน<br>
+                 2. ลูกค้าต้องการให้สร้างระบบที่เป็นฐานข้อมูลยืม-คืน เพื่อเก็บสถิติของผู้ยืมที่แก้ปัญหาเนื้อที่กระดาษที่เก็บข้อมูลยืม-คืนของแต่ละบุคคลไม่พอเขียน และปัญหาลายมือที่อ่านไม่ออกของผู้ยืมเวลากรอกรายละเอียดการยืม<br>
+                 3. ลูกค้าต้องการให้ระบบที่สร้างมีแจ้งเตือนค่าปรับของบุคคลที่เลยกำหนดการคืนหนังสือแบบอัตโนมัติ และคำนวณค่าปรับให้เสร็จ<br>
+                 4. ลูกค้าต้องการให้สร้างฐานข้อมูลที่เก็บข้อมูลหนังสือทั้งหมดที่มีอยู่ใน Resource Center<br>
+                 5. ลูกค้าต้องการให้มีบุคคลากรมาดูแลระบบอยู่ตลอดหลังจากเปิดใช้งาน</p>
+            </li>
+
+            <li>
+              <h2>Application ที่จะพัฒนาและผู้มีส่วนได้ส่วนเสีย</h2>
+              <p>1. สร้างระบบยืม-คืนหนังสือในลักษณะการกรอกข้อมูลโดยจะมี<br>
+                 &nbsp;&nbsp;1.1 ระบบ Login ของผู้เจ้าหน้าเพื่อไปสู่หน้าการยืม-คืน<br>
+                 &nbsp;&nbsp;1.2 ระบบข้อมูลแสดงรายละเอียดของหนังสือที่ผู้ยืมคนนั้นยืมออกมาเป็น Table<br>
+                 &nbsp;&nbsp;1.3 ระบบการเพิ่มหนังสือใหม่ผ่านการกรอกข้อมูล<br>
+                 &nbsp;&nbsp;1.4 ระบบลบหนังสือเก่าผ่านการ Search และกรอกข้อมูล<br>
+                 &nbsp;&nbsp;1.5 ระบบการ Search หนังสือที่ต้องการ<br>
+                 &nbsp;&nbsp;1.6 ระบบการตั้งค่าที่เจ้าหน้าที่สามารถกำหนดจำนวนวันยืม และอัตราค่าปรับ<br>
+                 &nbsp;&nbsp;1.7 ระบบ Database ที่เก็บจำนวนหนังสือทั้งหมด<br>
+                 &nbsp;&nbsp;1.8 ระบบ Database ที่เก็บสถิติการยืม ณ ปัจจุบัน<br>
+                 &nbsp;&nbsp;1.9 ระบบการแจ้งเตือนค่าปรับที่ยืมเกินวันที่กำหนดให้กับเจ้าหน้าที่<br>
+                 2. ผู้มีส่วนได้<br>
+                 &nbsp;&nbsp;2.1. เจ้าหน้าที่ห้องสมุดอำนวยความสะดวกในกระบวนการยืม-คืนหนังสือได้รวดเร็วขึ้น และตรวจสอบข้อมูลของผู้ยืมได้ง่ายยิ่งขึ้น<br>
+                 &nbsp;&nbsp;2.2. นักศึกษา และบุคคลที่ต้องการยืมหนังสือที่ Resource Center สามารถลดขั้นตอนการยืมหนังสือทำให้ประหยัดเวลาในการยืมมากขึ้น<br>
+                 &nbsp;&nbsp;2.3. คณะวิศวกรรมศาสตร์มีระบบยืม-คืนหนังสือใช้งานที่สะดวก และดีกว่ารูปแบบเดิม<br>
+                 &nbsp;&nbsp;2.4. คณะวิศวกรรมศาสตร์มีแจ้งเตือนตรวจสอบหนังสือที่สะดวก และมีความเชื่อถือมากขึ้น<br>
+                 &nbsp;&nbsp;2.5. คณะวิศวกรรมศาสตร์ลดภาระค่าใช้จ่ายในเรื่องกระดาษสำหรับจดยืม-คืนหนังสือ<br>
+                 3. ผู้มีส่วนเสีย<br>
+                 &nbsp;&nbsp;3.1. คณะวิศวกรรมศาสตร์ต้องสร้าง Database มารองรับฐานข้อมูลของหนังสือ และสถิติการยืม-คืนหนังสือ<br>
+                 &nbsp;&nbsp;3.2. เจ้าหน้าที่คณะวิศวกรรมศาสตร์ที่เป็นผู้ดูแล และปรับปรุงระบบภายหลังจากระบบใช้งานจริง</p>
+            </li>
+
+            <li>
+              <h2>User Stories & Lo-Fi Mockups</h2>
+              <br>
+              <img src="assets/lo-fi-mockups-1.jpg" width="75%" height="75%">
+              <br>
+              <p>Feature: Add new book to book categories<br>
+              &nbsp;&nbsp;As an administrator<br>
+              &nbsp;&nbsp;I want to add new book<br>
+              Scenario: add new book to book categories<br>
+              &nbsp;&nbsp;Given I am on the “AddNewBookPage”<br>
+              &nbsp;&nbsp;Then I should see field for enter book detail<br>
+              &nbsp;&nbsp;When I fill all book detail<br>
+              &nbsp;&nbsp;And I press “Done”<br>
+              &nbsp;&nbsp;Then I should see dialog “success full”<br>
+              &nbsp;&nbsp;And I should be on the “AddNewBookPage”<br>
+              <br>
+              <img src="assets/lo-fi-mockups-2.jpg" width="75%" height="75%">
+              <br>
+              <br>
+              Feature: Delete a book list<br>
+              &nbsp;&nbsp;As an admin<br>
+              &nbsp;&nbsp;So that I can delete a book list and update a book list in library<br>
+              &nbsp;&nbsp;I want to delete a book list from library database<br>
+              Scenario: Try to delete a book list<br>
+              &nbsp;&nbsp;Given I am on the delete book page<br>
+              &nbsp;&nbsp;Then I should see “Search for a book”<br>
+              &nbsp;&nbsp;When I fill in “Search Name of book” with “OOP”<br>
+              &nbsp;&nbsp;And I press “Search”<br>
+              &nbsp;&nbsp;Then I should see “Book List Table of OOP” on the delete book page<br>
+              &nbsp;&nbsp;When I click “Delete column” with “OOP in PHP”<br>
+              &nbsp;&nbsp;And I press “Delete”<br>
+              &nbsp;&nbsp;Then I should be on the delete book page<br>
+              &nbsp;&nbsp;And I should see message “OOP in PHP was deleted”<br>
+              <br>
+              <img src="assets/lo-fi-mockups-5.jpg" width="75%" height="75%">
+              <br>
+              <br>
+              Feature: Admin can do detail to borrowing book of student<br>
+              Scenario: Try to make detail to borrow book of student<br>
+              &nbsp;&nbsp;Give I am on the borrow page<br>
+              &nbsp;&nbsp;Then I should see detail of student to borrow book<br>
+              &nbsp;&nbsp;When I input ID book to borrow<br>
+              &nbsp;&nbsp;And I press to borrow<br>
+              &nbsp;&nbsp;Then I should to update name book to student detail of student to borrow book<br>
+              <br>
+              Feature: I can return a book<br>
+              &nbsp;&nbsp;As an administrator<br>
+              &nbsp;&nbsp;I want to return a book<br>
+              &nbsp;&nbsp;And check charge price in case of overdue<br>
+              Background:<br>
+              &nbsp;&nbsp;Given I am on the “borrow/return page”<br>
+              &nbsp;&nbsp;Then I should see “Borrowed Book Table”<br>
+              &nbsp;&nbsp;And I should see “Red Riding Hood And Wonderland” in table<br>
+              &nbsp;&nbsp;When I check a “Return_Checkbox” in row of “Red Riding Hood And Wonderland”<br>
+              &nbsp;&nbsp;And I press “Return” I should not see “Red Riding Hood And Wonderland” in table<br>
+              Scenario: return a book without charge<br>
+              &nbsp;&nbsp;I should see message “Book Returns Success” over the “Borrowed Book Table”<br>
+              Scenario: return a book with charge<br>
+              &nbsp;&nbsp;I should see message “Charge Price is 30 baths. Thank you.” over the “Borrowed Book Table”<br>
+              <br>
+              <img src="assets/lo-fi-mockups-4.jpg" width="75%" height="75%">
+              <br>
+              <br>
+              Feature: Admin can Change a Charge Price or Checkout Allow For Each Category User<br>
+              &nbsp;&nbsp;As an admin<br>
+              &nbsp;&nbsp;So that I can change a price charge for each category user<br>
+              &nbsp;&nbsp;I want to edit a price charge or checkout allow then update those object<br>
+              Scenario: Try to change a price charge or checkout allow<br>
+              &nbsp;&nbsp;Given I am on the ChargePrice page<br>
+              &nbsp;&nbsp;Then I should see “price charge Table”<br>
+              &nbsp;&nbsp;When I edit “Bachelor’s Degree row” and “Price Charge column” with “5”<br>
+              &nbsp;&nbsp;And I press “update”<br>
+              &nbsp;&nbsp;Then I should be on the ChargePrice page<br>
+              &nbsp;&nbsp;And I should see “Bachelor’s Degree row” and “Price Charge column” update to “5”</p>
+            </li>
+
+            <li>
+              <h2>Storyboards</h2>
+              <br>
+              <img src="assets/storyboards.jpg" width="75%" height="75%">
+              <br>
+            </li>
+
+            <li>
+              <h2>ER-diagram</h2>
+              <br>
+              <img src="assets/ER-diagram.jpg" width="75%" height="75%">
+              <br>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="footer">&nbsp;</div>
+    </div>
+  </body>
+</html>
