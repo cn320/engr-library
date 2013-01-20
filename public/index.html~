@@ -257,7 +257,7 @@
               &nbsp;&nbsp;Then I should see dialog “success full”<br>
               &nbsp;&nbsp;And I should be on the “AddNewBookPage”<br>
               <br>
-              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-2.jpg" width="75%" height="75%">
+              <img src="assets/lo-fi-mockups-2.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Delete a book list<br>
@@ -275,7 +275,7 @@
               &nbsp;&nbsp;Then I should be on the delete book page<br>
               &nbsp;&nbsp;And I should see message “OOP in PHP was deleted”<br>
               <br>
-              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-5.jpg" width="75%" height="75%">
+              <img src="assets/lo-fi-mockups-5.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Admin can do detail to borrowing book of student<br>
@@ -301,7 +301,7 @@
               Scenario: return a book with charge<br>
               &nbsp;&nbsp;I should see message “Charge Price is 30 baths. Thank you.” over the “Borrowed Book Table”<br>
               <br>
-              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-4.jpg" width="75%" height="75%">
+              <img src="assets/lo-fi-mockups-4.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Admin can Change a Charge Price or Checkout Allow For Each Category User<br>
@@ -320,14 +320,14 @@
             <li>
               <h2>Storyboards</h2>
               <br>
-              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/storyboards.jpg" width="75%" height="75%">
+              <img src="assets/storyboards.jpg" width="75%" height="75%">
               <br>
             </li>
 
             <li>
               <h2>ER-diagram</h2>
               <br>
-              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/ER-diagram.jpg" width="75%" height="75%">
+              <img src="assets/ER-diagram.jpg" width="75%" height="75%">
               <br>
             </li>
           </ol>

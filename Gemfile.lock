@@ -78,6 +78,11 @@ GEM
     gherkin (2.11.5)
       json (>= 1.4.6)
     haml (3.1.7)
+    haml-rails (0.3.5)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (~> 3.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.1)
     i18n (0.6.1)
     jquery-rails (2.1.4)
@@ -180,7 +185,7 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   debugger
-  haml
+  haml-rails
   jquery-rails
   launchy
   rails (= 3.1.0)
