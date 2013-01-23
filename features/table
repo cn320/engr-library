@@ -1,0 +1,16 @@
+Background: book have been added to database
+
+  Given the following book exist:
+  | bookname                     | bookcode | barcode    |
+  | Object Oriented Programming  | TP1901   | 456323456  |
+  | Data Structure 1             | TP1902   | 273648867  |
+  | Data Structure 2             | TP1903   | 958766544  |
+  | Operating System             | TP1904   | 658374894  |
+  | Database                     | TP1905   | 355344556  |
+  | Crypto                       | TP1906   | 786564342  |
+  | Web Application              | TP1907   | 345677789  |
+  | Software Engineering         | TP1908   | 123344688  |
+  | Internet Technology          | TP1909   | 566797664  |
+  | Architecture                 | TP1910   | 345343277  |
+
+  I am on the “AddNewBookPage”
