@@ -1,0 +1,2 @@
+module BookdbsHelper
+end

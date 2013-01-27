@@ -1,0 +1,11 @@
+class CreateChangeprices < ActiveRecord::Migration
+  def change
+    create_table :changeprices do |t|
+      t.string :type
+      t.integer :checkoutdate
+      t.float :price
+
+      t.timestamps
+    end
+  end
+end
