@@ -5,7 +5,7 @@ class CreateUserlists < ActiveRecord::Migration
       t.string :name
       t.string :surname
 
-      t.timestamps
+
     end
   end
 end

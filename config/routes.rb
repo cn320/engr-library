@@ -1,4 +1,8 @@
 Cn320projectEngrLibrary::Application.routes.draw do
+  get "addbook/index"
+
+  get "useraccess/index"
+
   get "bookdbs/index"
 
   # The priority is based upon order of creation:
@@ -66,5 +70,13 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/bookdbs/created"
   get "/bookdbs/useraccess"
 
+  get "/addbook/popup"
+  post "/addbook/createnewbook"
 
+  get "/useraccess/createnewstudent"
+  post "/useraccess/accessuser"
+  get "/useraccess/createnewuser"
+
+  post "/useraccess/checknewstudent"
+  get "/useraccess/popup"
 end

@@ -39,8 +39,9 @@ ActiveRecord::Schema.define(:version => 20130126111246) do
   end
 
   create_table "userlists", :force => true do |t|
-    t.string "name"
-    t.string "surname"
+    t.integer "stucolid"
+    t.string  "name"
+    t.string  "surname"
   end
 
 end
