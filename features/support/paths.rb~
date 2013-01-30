@@ -9,11 +9,12 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 	
-	when /^the AddBookpage/ then '/bookdbs/index'
+	when /^the AddBookpage/ then '/addbook/index'	
+	when /^the AddBookpage/ then '/addbook/popup'
 	when /^the DeleteBookPage/ then '/bookdbs/index'
 	when /^the borrowreturnpage/ then '/bookdbs/index'
 	when /^the ChargePrice page/ then '/bookdbs/index'
-    when /^the borrow page/ the '/bookdbs/index'
+    when /^the borrow page/ then '/bookdbs/index'
 
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'

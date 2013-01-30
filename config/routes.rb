@@ -72,14 +72,13 @@ Cn320projectEngrLibrary::Application.routes.draw do
 
   get "/addbook/popup"
   post "/addbook/createnewbook"
+  get "/addbook/error"
 
   get "/useraccess/createnewstudent"
   post "/useraccess/accessuser"
   get "/useraccess/createnewuser"
-
   post "/useraccess/checknewstudent"
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
-  
 end

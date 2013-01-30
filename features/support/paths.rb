@@ -9,7 +9,8 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 	
-	when /^the AddBookpage/ then '/bookdbs/index'
+	when /^the AddBookpage/ then '/addbook/index'	
+	when /^the Popup page/ then '/addbook/popup'
 	when /^the DeleteBookPage/ then '/bookdbs/index'
 	when /^the borrowreturnpage/ then '/bookdbs/index'
 	when /^the ChargePrice page/ then '/bookdbs/index'
