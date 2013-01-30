@@ -9,7 +9,7 @@ class AddbookController < ApplicationController
     	redirect_to "/addbook/popup" # The popup is message to user 
     else
         flash[:notice] = "This Book is available in the system"
-        redirect_to "/addbook/popup"
+        redirect_to "/addbook/index"
     end
   end
 

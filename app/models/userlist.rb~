@@ -1,7 +1,7 @@
 class Userlist < ActiveRecord::Base
 
   def Userlist.loginstudent studentid
-	z = studentid.to_i() # studentid is String
+	z = studentid.to_i()
     if user = Userlist.find_by_stucolid(z)
       if z == user.stucolid
         user

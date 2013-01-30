@@ -8,13 +8,6 @@ class Adminlist < ActiveRecord::Base
     end
   end
   
-  def Adminlist.createacc username, password
-    @newUser = Adminlist.new(:username=>username,:password=>password)
-    if @newUser.save
-       true
-    else 
-       false
-    end
-  end
+ 
 
 end

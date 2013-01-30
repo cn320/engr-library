@@ -13,4 +13,8 @@ class AddbookController < ApplicationController
     end
   end
 
+  def accessuser
+
+  end
+
 end

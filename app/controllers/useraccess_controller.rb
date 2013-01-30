@@ -4,13 +4,22 @@ class UseraccessController < ApplicationController
 	end
 	
 	def accessuser
-      if user = Userlist.authenticate(params[:studentids])
-      session[:user_id] = user.stucolid
-      redirect_to "/useracess/popup", :notice => 'login succeed'
-    else
-      flash[:notice] = 'login failed'
-      redirect_to :back
-    end
+      if @x = Userlist.loginstudent(params[:studentids])
+         redirect_to "/useraccess/popup", :notice => 'login succeed'
+	#if user = Userlist.find_by_stucolid(params[:studentids])
+	#	@x = user.stucolid #Fixnum
+	#	@y = params[:studentids] #String
+    #    if @y.to_i() == @x
+	#		redirect_to "/useraccess/popup"
+	#  	else
+	#		@z = "ERROR IN DEEP"
+	#	    redirect_to "/useraccess/accessuser"
+	#    end	
+	  else
+        flash[:notice] = 'login failed'
+      	@z = "NO LOGIN"
+      	redirect_to "/useraccess/index"
+      end
 	end
 
 	def createnewuser

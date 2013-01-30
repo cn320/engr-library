@@ -79,4 +79,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
 
   post "/useraccess/checknewstudent"
   get "/useraccess/popup"
+  get "/useraccess/error"
+  get  "/useraccess/checkbug"
+  
 end
