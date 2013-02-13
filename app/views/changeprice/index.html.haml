@@ -1,0 +1,37 @@
+-# Change Price#index
+-# Find me in app/views/changeprice/index.html.haml
+
+%h2 CHANGE PRICE
+%form{ :controller => 'changeprice', :action => 'valuechange', :method => 'post' }
+%table{ :border => 0, :width => "100%", :height => "100%" }
+ %tr
+  %td
+  %td
+   %label Amount Borrow
+  %td
+   %label Day of Expire
+ %tr
+  %td
+   %label	Bachelor's Degree, Staff
+  %td
+   =text_field_tag :bacborrow, params[:bacborrow], :value => "abdfdsf" 
+  %td
+   =text_field_tag :bacexp, params[:bacexp]
+ %tr
+  %td
+   %label	Master's Degree
+  %td
+   =text_field_tag :masboow, params[:masboow]
+  %td
+   =text_field_tag :masexp, params[:masexp]
+ %tr
+  %td
+   %label Professor
+  %td
+   =text_field_tag :proborrow, params[:proborrow]
+  %td
+   =text_field_tag :proexp, params[:proexp]
+ %tr{ :align => "center", :valign => "center" }
+  %td
+  %td
+   %input{ :type => "submit", :name => "submit", :id => "create", :value => "UPDATE" }
