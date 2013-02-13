@@ -1,5 +1,8 @@
 Cn320projectEngrLibrary::Application.routes.draw do
+  get "changeprice/index"
+
   get "addbook/index"
+
   get "addbook/mainpage"
 
   get "useraccess/index"
@@ -82,4 +85,5 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
+  get "/useraccess/loginsuccess"
 end
