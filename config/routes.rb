@@ -1,6 +1,8 @@
 Cn320projectEngrLibrary::Application.routes.draw do
   get "addbook/index"
 
+  get "addbook/mainpage"
+
   get "useraccess/index"
 
   get "bookdbs/index"

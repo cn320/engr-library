@@ -1,5 +1,6 @@
 Cn320projectEngrLibrary::Application.routes.draw do
   get "addbook/index"
+  get "addbook/mainpage"
 
   get "useraccess/index"
 
@@ -72,6 +73,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
 
   get "/addbook/popup"
   post "/addbook/createnewbook"
+  get "/addbook/error"
 
   get "/useraccess/createnewstudent"
   post "/useraccess/accessuser"
@@ -80,6 +82,4 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
-  
-  get "/addbook/error"
 end
