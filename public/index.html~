@@ -196,6 +196,9 @@
 
         <div id="about">
           <h3>ระบบยืม-คืนหนังสือห้องสมุด คณะวิศวกรรมศาสตร์</h3>
+          <h4>Update<br>
+          Iteration 1-1: 27/1/2556<br>
+          Iteration 1-2: 3/2/2556</h4>
           <div id="about-content" style="display: none"></div>
         </div>
 
@@ -207,6 +210,9 @@
           4. นางสาวแก้ววิมล มุขสมบัติ เลขทะเบียน 5210611454<br>
           5. นางสาวชัชชฎา ตันพิบูลย์วงศ์ เลขทะเบียน 5210611918<br>
           6. นายณัฐพงษ์ ทีฆายุภักดิ์ เลขทะเบียน 5210611314</h2>
+          <h1>Links</h1>
+          <h2>Tracker: <a href="https://www.pivotaltracker.com/projects/732039">Click</a><br>
+          Github repo: <a href="https://github.com/theetawat/cn320project-engr-library">Click</a></h2>
 
           <ol>
             <li>
@@ -257,7 +263,7 @@
               &nbsp;&nbsp;Then I should see dialog “success full”<br>
               &nbsp;&nbsp;And I should be on the “AddNewBookPage”<br>
               <br>
-              <img src="assets/lo-fi-mockups-2.jpg" width="75%" height="75%">
+              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-2.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Delete a book list<br>
@@ -275,7 +281,7 @@
               &nbsp;&nbsp;Then I should be on the delete book page<br>
               &nbsp;&nbsp;And I should see message “OOP in PHP was deleted”<br>
               <br>
-              <img src="assets/lo-fi-mockups-5.jpg" width="75%" height="75%">
+              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-5.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Admin can do detail to borrowing book of student<br>
@@ -301,7 +307,7 @@
               Scenario: return a book with charge<br>
               &nbsp;&nbsp;I should see message “Charge Price is 30 baths. Thank you.” over the “Borrowed Book Table”<br>
               <br>
-              <img src="assets/lo-fi-mockups-4.jpg" width="75%" height="75%">
+              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/lo-fi-mockups-4.jpg" width="75%" height="75%">
               <br>
               <br>
               Feature: Admin can Change a Charge Price or Checkout Allow For Each Category User<br>
@@ -320,14 +326,14 @@
             <li>
               <h2>Storyboards</h2>
               <br>
-              <img src="assets/storyboards.jpg" width="75%" height="75%">
+              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/storyboards.jpg" width="75%" height="75%">
               <br>
             </li>
 
             <li>
               <h2>ER-diagram</h2>
               <br>
-              <img src="assets/ER-diagram.jpg" width="75%" height="75%">
+              <img src="https://raw.github.com/theetawat/cn320project-engr-library/master/app/assets/images/ER-diagram.jpg" width="75%" height="75%">
               <br>
             </li>
           </ol>
