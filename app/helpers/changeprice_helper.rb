@@ -1,0 +1,2 @@
+module ChangepriceHelper
+end

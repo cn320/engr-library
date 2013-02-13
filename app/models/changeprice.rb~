@@ -6,8 +6,6 @@ class Changeprice < ActiveRecord::Base
 		#	samebook
 		#else
 			#This BOOK is not DB
-				s = Changeprice.find(1)
-				s.type = 'bbb'
 			if(Changeprice.create!(:type=>"Bachelor",:price=>bborrow,:checkoutdate=>bexp))
 			end
 		#end

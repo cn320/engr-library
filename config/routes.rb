@@ -1,4 +1,6 @@
 Cn320projectEngrLibrary::Application.routes.draw do
+  get "changeprice/index"
+
   get "addbook/index"
 
   get "useraccess/index"
