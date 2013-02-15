@@ -9,6 +9,12 @@ Cn320projectEngrLibrary::Application.routes.draw do
 
   get "bookdbs/index"
 
+  get "addbook/form"
+
+  get "delete/index"
+
+  get "delete/popup"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -85,4 +91,8 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
+
+  post "delete/search"
+  post "delete/index"
+  post "delete/confirmdelete"
 end

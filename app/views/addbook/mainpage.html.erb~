@@ -12,7 +12,7 @@
  
 <% @books.each do |book| %>
   <tr>
-    <td align='center'><%= book.i %></td>
+    <td align='center'><%= book.id %></td>
     <td align='center'><%= book.barcode %></td>
     <td align='center'><%= book.name %></td>
     <td align='center'><%= book.callnum %></td>

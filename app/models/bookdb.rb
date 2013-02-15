@@ -9,6 +9,6 @@ class Bookdb < ActiveRecord::Base
 			if(Bookdb.create!(:name=>bookname,:callnum=>bookid,:barcode=>barcode))
 			end
 		end
-	end
+        end
 
 end

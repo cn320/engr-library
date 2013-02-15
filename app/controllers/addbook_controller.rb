@@ -1,14 +1,9 @@
 class AddbookController < ApplicationController
   def index
   end
-  
-  def mainpage
-      @books = Bookdb.all
-  end
- 
+
   def popup
-      
-      redirect_to "/addbook/popup"
+      #redirect_to "/addbook/popup"
   end
 
   def createnewbook
@@ -18,7 +13,7 @@ class AddbookController < ApplicationController
     if(!Bookdb.createnewbook(@bcode,@bname,@bid))
     	#flash[:notice] = "#{@bname} added"
         sleep(2.0)
-    	redirect_to "/addbook/mainpage" # The popup is message to user
+    	redirect_to "/addbook/popup" # The popup is message to user
          
     else
         flash[:notice] = "This Book is available in the system"
