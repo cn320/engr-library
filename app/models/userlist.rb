@@ -8,4 +8,12 @@ class Userlist < ActiveRecord::Base
       end
     end
   end
+
+  def Userlist.getstudentname studentid
+     z = studentid.to_i()
+     user = Userlist.find_by_stucolid(z)
+     studentname = user.name
+     studentsur = user.surname
+     return studentname+" "+studentsur
+  end
 end

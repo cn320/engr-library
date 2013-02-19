@@ -19,3 +19,5 @@
     %tr{ :align => "center", :valign => "center" }
       %td
         %input{ :type => "submit", :name => "submit", :id => "create" }
+
+= link_to 'Delete Books', delete_index_path

@@ -4,8 +4,12 @@ class UseraccessController < ApplicationController
 	end
 	
 	def accessuser
-      if @x = Userlist.loginstudent(params[:studentids])
-         redirect_to "/useraccess/popup", :notice => 'login succeed'
+      	if @x = Userlist.loginstudent(params[:studentids])
+	 session[:studentname] = Userlist.getstudentname(params[:studentids])
+         session[:studentid] = params[:studentids]
+
+	 
+         redirect_to "/useraccess/loginsuccess"
 	#if user = Userlist.find_by_stucolid(params[:studentids])
 	#	@x = user.stucolid #Fixnum
 	#	@y = params[:studentids] #String
