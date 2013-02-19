@@ -1,0 +1,22 @@
+-# in app/views/movies/show.html.haml
+
+%h2 Details about #{@book.name}
+
+%ul#details
+  %li
+    Title:
+    = @book.name
+  %li
+    Barcode:
+    = @book.barcode
+  %li
+    BookId:
+    = @book.id
+
+%h3 Description:
+
+%p#description= @movie.description
+
+-#= link_to 'Edit', edit_movie_path(@book)
+= button_to 'Delete', delete_path(@book), :method => :delete, :confirm => 'Are you sure?'
+-#= link_to 'Back to movie list', movies_path

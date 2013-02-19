@@ -1,0 +1,22 @@
+class DeleteController < ApplicationController
+  def index
+	 @bookName = params[:bookname]
+         @books = Bookdb.find_by_name(@booName)
+  end
+
+  def delete
+	 @bid = params[:bookid]
+         @bookName = params[:bookname]
+         @books = Bookdb.find_by_name(@booName)
+    if(!Bookdb.deletebook(@bid))
+    	#flash[:notice] = "#{@bname} added"
+        sleep(2.0)
+    	redirect_to "/addbook/mainpage" # The popup is message to user
+         
+    else
+        flash[:notice] = "This Book is available in the system"
+        redirect_to "/addbook/error"
+    end
+  end
+
+end

@@ -1,0 +1,34 @@
+<h2 align='center'> Search book for Delete Book </h2>
+<form controller = 'addbook' , action = 'createnewbook' , method = 'post'>
+  <table border = 0 width = "100%" height = "100%" >
+    <tr align = "center", valign = "center" >
+      <th> BOOK NAME : </th>
+      <th> =text_field_tag :bookname, params[:bookname] </th>
+
+<h1 align = 'center'>Listing Books</h1>
+ 
+<table border=1 align='center'>
+  <tr>
+    <th width = 100 >Book ID</th>
+    <th width = 200>Bar Code</th>
+    <th width = 200>Title</th>
+    <th width = 200>Call Num</th>
+    <th width = 100>Edit</th>
+    <th width = 100>Remove</th>
+  </tr>
+ 
+<% @books.each do |book| %>
+  <tr>
+    <td align='center'><%= book.id %></td>
+    <td align='center'><%= book.barcode %></td>
+    <td align='center'><%= book.name %></td>
+    <td align='center'><%= book.callnum %></td>
+    <td align='center'><%= link_to 'Edit'%></td>
+    <td align='center'><%= link_to 'Remove'%></td>
+  </tr>
+<% end %>
+</table>
+ 
+<br />
+<a href ="/addbook/index"> index </a>
+<h3 align = 'center'><%= link_to 'New book', addbook_index_path %></h3>
