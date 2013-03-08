@@ -6,7 +6,7 @@ class Changeprice < ActiveRecord::Base
 		#	samebook
 		#else
 			#This BOOK is not DB
-			if(Changeprice.create!(:type=>"Bachelor",:price=>bborrow,:checkoutdate=>bexp))
+			if(Changeprice.create!(:type=>mborrow',:price=>bborrow,:checkoutdate=>bexp))
 			end
 		#end
 	end

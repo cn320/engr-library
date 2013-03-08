@@ -1,28 +1,25 @@
 class ChangepriceController < ApplicationController
   
   def index
+	@bac = Changeprice.find(1)
+	@mac = Changeprice.find(2)
+	@pac = Changeprice.find(3)
   end
   
-  def valuechange
-	 redirect_to "/changeprice/popup"
-	 @bborrow = params[:bacborrow]
-	 @bexp = params[:bacexp]
-	 @mborrow = params[:masborrow]
-	 @mexp = params[:masexp]
-	 @pborrow = params[:proborrow]
-	 @pexp = params[:proexp]   
-    #@price = Movie.find params[:id]
-    #@price.update_attributes!(params[:movie])
-    #flash[:notice] = "#{@movie.title} was successfully updated."
-    #redirect_to movie_path(@movie)
-
-    if(!Changeprice.changenewvalue(@bborrow,@bexp,@mborrow,@mexp,@pborrow,@pexp))
-    	flash[:notice] = " added"
-    	redirect_to "/changeprice/index" # The popup is message to user 
-    else
-        flash[:notice] = "This Book is available in the system"
-        #redirect_to "/addbook/error"
-    end
+  def show
+	@bac = Changeprice.find(1)
+	@mac = Changeprice.find(2)
+	@pac = Changeprice.find(3)
   end
 
+  def update
+    @bachelor = Changeprice.find(1) 
+    @bachelor.update_attributes!(params[:bac])
+    @master = Changeprice.find(2) 
+    @master.update_attributes!(params[:mac])
+    @proff = Changeprice.find(3) 
+    @proff.update_attributes!(params[:pac])
+    #flash[:notice] = "#{@movie.title} was successfully updated."
+    #redirect_to movie_path(@movie)
+  end
 end
