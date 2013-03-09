@@ -1,5 +1,5 @@
 %h1 Change New Values
-= form_tag changeprice_path(), :method => :put do
+= form_tag changeprice_path(@bac), :method => :put do
   %table
     %tr
       %td
