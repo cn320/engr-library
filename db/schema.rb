@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126111246) do
+ActiveRecord::Schema.define(:version => 20130308090730) do
 
   create_table "adminlists", :force => true do |t|
     t.string "username"
@@ -25,11 +25,15 @@ ActiveRecord::Schema.define(:version => 20130126111246) do
   end
 
   create_table "borrowreturns", :force => true do |t|
+    t.integer  "studentid"
+    t.string   "bookname"
+    t.datetime "borrowdate"
+    t.datetime "duedate"
+    t.string   "bookid"
     t.integer  "barcode"
-    t.string   "name"
-    t.datetime "dateborrow"
-    t.datetime "dateend"
-    t.float    "price"
+    t.float    "fee"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "changeprices", :force => true do |t|

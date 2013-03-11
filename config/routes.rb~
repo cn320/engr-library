@@ -7,7 +7,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
 
   get "bookdbs/index"
 
-  get "delete/index"
+  #get "delete/index"
 
   resources :delete
 

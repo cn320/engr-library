@@ -87,6 +87,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
+  post "/useraccess/borrowbook"
 #<<<<<<< HEAD
 
 #=======

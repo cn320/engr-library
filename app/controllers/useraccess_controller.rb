@@ -23,20 +23,30 @@ class UseraccessController < ApplicationController
         flash[:notice] = 'login failed'
       	@z = "NO LOGIN"
       	redirect_to "/useraccess/index"
-      end
+      	end
 	end
 
 	def createnewuser
 	end
 
+	def borrowbook
+		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
+		redirect_to "/useraccess/main"
+	end
+
+	#def main
+	#	session[:studentid] = params[:studentids]
+	#	Borrowreturn.findBorrow(params[:studentids])	
+	#end
+
 	def checknewstudent
 		if(!Userlist.find_by_stucolid(params[:stuid]))
-    	@newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname])
-    	flash[:notice] = "#{@newacc.name} added"
-    	redirect_to "/useraccess/popup" # The popup is message to user 
-    else
-        flash[:notice] = "This student is already to register"
-        redirect_to "/useraccess/createnewuser"	
-	end
+    		 @newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname])
+    		flash[:notice] = "#{@newacc.name} added"
+    		redirect_to "/useraccess/popup" # The popup is message to user 
+    		else
+        	flash[:notice] = "This student is already to register"
+        	redirect_to "/useraccess/createnewuser"	
+		end
 	end
 end

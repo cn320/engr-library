@@ -10,7 +10,6 @@ class Borrowreturn < ActiveRecord::Base
 		#return @books
   	end
 	def Borrowreturn.add(bid,stuid)
-		stuidi = stuid.to_i()
 		#find book name via book id
 		book = Bookdb.find_by_callnum(bid)
 		bname = book.name
@@ -19,6 +18,6 @@ class Borrowreturn < ActiveRecord::Base
 		strtime = time.strftime("%d-%m-%Y")
 		duedate = time + (24*60*60)
 		strduedate = duedate.strftime("%d-%m-%Y")
-		Borrowreturn.create!(:studentid=>stuidi,:bookname=>bname,:borrowdate=>strtime,:duedate=>strduedate,:bookid=>bid,:barcode=>bbarcode,:fee=>0)
+		Borrowreturn.create!(:studentid=>stuid,:bookname=>bname,:borrowdate=>strtime,:duedate=>strduedate,:bookid=>bid,:barcode=>bbarcode,:fee=>0)
 	end
 end
