@@ -1,33 +1,36 @@
-<h2 align='center'> Search book for delete </h2>
+<h2 align='center'> Search book</h2>
 <form action="delete" method="GET">
 <table border = 0 align='center'>
   <tr align = "center", align = "center" >
-     <th> BOOK NAME : </th>
+     <th align = "right"> BOOK NAME : </th>
      <td> <input type="text" name="bookname" value=<%= @bookName %> ></td>
   </tr>
-  <tr align='center'>
-     <th> </th>
-     <th align ='left'> <input type="submit" value="search"/></th>
+  <tr align = "center", align = "center" >
+     <th align = "right"> BOOK ID : </th>
+     <td> <input type="text" name="bookid" value=<%= @bookId %> ></td>
+  </tr>
+  <tr align = "center", align = "center" >
+     <th align = "right"> BOOK BARCODE : </th>
+     <td> <input type="text" name="bookbarcode" value=<%= @bookBarcode %> ></td> 
   </tr>
 </table>
+<center><input type="submit" value="search"/></center>
 </form>
 
 <h1 align = 'center'>Listing Books</h1>
 
-<table border=1 align='center'>
+<table id = "tabledeletes" align = "center">
   <tr>
-    <th width = 100>Book ID</th>
+    <th width = 400>Title</th>
     <th width = 200>Bar Code</th>
-    <th width = 200>Title</th>
-    <th width = 200>Call Num</th>
+    <th width = 200>Book Id</th>
     <th width = 100>Remove</th>
   </tr>
  
 <% @books.each do |book| %>
   <tr>
-    <td align='center'><%= book.id %></td>
-    <td align='center'><%= book.barcode %></td>
     <td align='center'><%= book.name %></td>
+    <td align='center'><%= book.barcode %></td>
     <td align='center'><%= book.callnum %></td>
     <td align='center'><%= link_to 'Remove', delete_path(book)%></td>
   </tr>

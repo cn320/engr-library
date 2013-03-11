@@ -4,13 +4,13 @@
 
 %ul#details
   %li
-    Title:      
+    Title       :      
     = @book.name
   %li
-    Barcode:
+    Barcode   :
     = @book.barcode
   %li
-    BookId:
+    BookId    :
     = @book.callnum
 
 

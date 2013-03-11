@@ -1,5 +1,5 @@
 Cn320projectEngrLibrary::Application.routes.draw do
-  get "changeprice/index"
+  #get "changeprice/index"
 
   get "addbook/index"
 
@@ -8,8 +8,8 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "bookdbs/index"
 
   #get "delete/index"
-
   resources :delete
+  resources :changeprice
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -87,7 +87,12 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
+<<<<<<< HEAD
   post "/useraccess/borrowbook"
+=======
+  
+  #post "/changeprice/valuechange"
+>>>>>>> d83568d10c7c89c2a6b471c079adc1bee6a8a5ed
 #<<<<<<< HEAD
 
 #=======
