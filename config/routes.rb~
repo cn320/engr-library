@@ -30,7 +30,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
-  get "/useraccess/borrowbook"
+  GET] "/useraccess/borrowbook"
 
   get "/useraccess/loginsuccess"
   get "/useraccess/main"
