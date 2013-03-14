@@ -1,5 +1,5 @@
 <h2 align='center'> Search book</h2>
-<form action="delete" method="GET">
+<form action="index" method="GET">
 <table border = 0 align='center'>
   <tr align = "center", align = "center" >
      <th align = "right"> BOOK NAME : </th>
@@ -19,7 +19,7 @@
 
 <h1 align = 'center'>Listing Books</h1>
 
-<table id = "deletes#books" align = "center">
+<table id = "tabledeletes" align = "center">
   <tr>
     <th width = 400>Title</th>
     <th width = 200>Bar Code</th>

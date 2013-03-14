@@ -10,7 +10,7 @@ Background:
 
   Given I am on the borrowreturnpage
 
-  Then I should see "Borrowed Book Table"
+  Then I should see "Borrowed Book"
 
   And I should see "Red Riding Hood And Wonderland" in table
 

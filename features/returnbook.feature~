@@ -10,13 +10,13 @@ Background:
 
   Given I am on the borrowreturnpage
 
-  Then I should see "Borrowed Book Table"
+  Then I should see "หนังสือที่ยืม"
 
   And I should see "Red Riding Hood And Wonderland" in table
 
   When I check a "Return_Checkbox in row of Red Riding Hood And Wonderland"
 
-  And I press “Return” 
+  And I press "Return"
 
   Then I should not see "Red Riding Hood And Wonderland" in table
 

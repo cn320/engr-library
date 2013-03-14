@@ -13,9 +13,9 @@ module NavigationHelpers
 	when /^the Popup page/ then '/addbook/popup'
 	when /^the DeleteBookPage/ then '/delete/index'
 	when /^the book details page/ then '/delete/index'
-	when /^the borrowreturnpage/ then '/bookdbs/index'
+	when /^the borrowreturnpage/ then '/useraccess/main'
 	when /^the ChargePrice page/ then '/bookdbs/index'
-        when /^the borrow page/ then '/bookdbs/index'
+        when /^the borrow page/ then '/useraccess/main'
 
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'

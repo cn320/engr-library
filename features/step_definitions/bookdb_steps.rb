@@ -1,4 +1,6 @@
 Given /^(?:|I )am on (.+)$/ do |page_name|
+  #session[:studentid] = '521'
+  @status = Borrowreturn.find(:all , :conditions =>{:studentid => 1})
   visit path_to(page_name)
 end
 

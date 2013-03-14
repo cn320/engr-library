@@ -30,6 +30,7 @@ class UseraccessController < ApplicationController
 	
 
 	def main
+		@status = Borrowreturn.find(:all , :conditions =>{:studentid => 1})
 		if(session[:studentid] != nil)
 			if(params[:id] != nil)
 			   	id = params[:id]

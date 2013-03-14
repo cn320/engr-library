@@ -1,6 +1,6 @@
 class UseraccessController < ApplicationController
 	def index
-		if(session[:studentid] != nil)
+		if(session[:studentid] != nil || session[:user_id])
 			
 		else
 			redirect_to "/bookdbs/index"	
@@ -30,6 +30,7 @@ class UseraccessController < ApplicationController
 	
 
 	def main
+		@status=Bookdb.find(:all)
 		if(session[:studentid] != nil)
 			if(params[:id] != nil)
 			   	id = params[:id]
