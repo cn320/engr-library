@@ -1,9 +1,9 @@
 -# Addbook#index
 -# Find me in app/views/addbook/index.html.haml
-
+#%a{:href => '/bookdbs/logout'} back
 %h2{:style=>'text-align: center'} Increase New Book
 %form{ :controller => 'addbook', :action => 'createnewbook', :method => 'post' }
-  %table{ :border => 0, :width => "100%", :height => "100%" }
+  %table#books{ :border => 0, :width => "100%", :height => "100%" }
     %tr{ :align => "center", :valign => "center" }
       %td
         %label BOOK NAME :

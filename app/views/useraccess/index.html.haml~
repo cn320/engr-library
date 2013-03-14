@@ -1,6 +1,6 @@
 -# Addbook#index
--# Find me in app/views/addbook/index.html.haml
-
+-# Find me in app/views/useraccess/index.html.haml
+%a{:href => '/bookdbs/logout'} Log out
 %a{:href => 'createnewuser'} Add New Student
 
 %h2{:style=>'text-align: center'} Fill In Student ID

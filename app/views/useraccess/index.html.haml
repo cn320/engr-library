@@ -1,10 +1,10 @@
 -# Addbook#index
 -# Find me in app/views/useraccess/index.html.haml
-
+%a{:href => '/bookdbs/logout'} Log out
 %a{:href => 'createnewuser'} Add New Student
 
 %h2{:style=>'text-align: center'} Fill In Student ID
-%form{ :controller => 'useraccess', :action => 'accessuser', :method => 'post' }
+%form{ :controller => 'useraccess', :action => 'accessuser', :method => 'get' }
   %table{ :border => 0, :width => "100%", :height => "100%" }
     %tr{ :align => "center", :valign => "center" }
       %td

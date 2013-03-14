@@ -4,20 +4,13 @@
 %lable ชื่อ-นามสกุล :
 =session[:studentname]
 
+
 <br>
 %lable เลขประจำตัวนักศึกษา :
 =session[:studentid]
 
-%h4{:style=>'text-decoration: underline;'} ยืมหนังสือ
+=session
 
-%form{ :controller => 'useraccess', :action => 'borrowbook', :method => 'get' }
-  %table{ :border => 0, :width => "100%", :height => "100%" }
-    %tr{ :align => "center", :valign => "center" }
-      %td
-        %label รหัสหนังสือ :
-        =text_field_tag  :bid, params[:bid]
-      %td
-        %input{ :type => "submit", :name => "submit", :value => "Borrow" }
 
 
 %h4{:style=>'text-decoration: underline;'} หนังสือที่ยืม
@@ -40,12 +33,28 @@
       %td
         %label คืน
   %tbody
-  - @status.each do |user|
-    %tr
+  - @find.each do |user|
+    %tr{ :align => "center", :valign => "center" }
       %td= user.bookname
       %td= user.borrowdate
       %td= user.duedate
       %td= user.bookid
       %td= user.barcode
       %td= user.fee
-      %td= button_to "Remove", :controller=>"useraccess",:action => "main",:id => user.id, :method => :delete
+      %td= check_box_tag "handin"
+
+
+%h4{:style=>'text-decoration: underline;'} ยืมหนังสือ
+
+%form{ :controller => 'useraccess', :action => 'borrowbook', :method => 'get' }
+  %table{ :border => 0, :width => "100%", :height => "100%" }
+    %tr{ :align => "center", :valign => "center" }
+      %td
+        %label Barcode :
+        =text_field_tag  :bid, params[:bid]
+        
+      %td
+        %input{ :type => "submit", :name => "submit", :value => "Borrow" }
+
+
+    

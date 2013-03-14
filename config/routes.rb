@@ -11,13 +11,16 @@ Cn320projectEngrLibrary::Application.routes.draw do
   resources :delete
   resources :changeprice
 
-  post "bookdbs/login"
+  post "/bookdbs/login"
   get "/bookdbs/createaccount"
   post "/bookdbs/createaccount"
   post "/bookdbs/createacc"
   get "/bookdbs/createacc"
   get "/bookdbs/created"
   get "/bookdbs/useraccess"
+  get "/bookdbs/logout"
+
+  get "/useraccess/accessuser"
 
   get "/addbook/popup"
   post "/addbook/createnewbook"
@@ -36,4 +39,5 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/main"
 
   post "/useraccess/borrowbook"
+  get "/bookdbs/login"
 end

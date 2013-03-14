@@ -1,6 +1,5 @@
 -# Bookdbs#index
 -# Find me in app/views/bookdbs/index.html.haml
-%body{ :bgcolor => "yellow" }
 %a{:href => 'createaccount'} create account
 %h2{:style=>'text-align: center'} Login Page
 %form{ :controller => 'bookdbs', :action => 'login', :method => 'post' }

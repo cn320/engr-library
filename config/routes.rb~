@@ -11,13 +11,14 @@ Cn320projectEngrLibrary::Application.routes.draw do
   resources :delete
   resources :changeprice
 
-  post "bookdbs/login"
+  post "/bookdbs/login"
   get "/bookdbs/createaccount"
   post "/bookdbs/createaccount"
   post "/bookdbs/createacc"
   get "/bookdbs/createacc"
   get "/bookdbs/created"
   get "/bookdbs/useraccess"
+  get "/bookdbs/logout"
 
   get "/addbook/popup"
   post "/addbook/createnewbook"
@@ -30,10 +31,11 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/useraccess/popup"
   get "/useraccess/error"
   get  "/useraccess/checkbug"
-  GET] "/useraccess/borrowbook"
+  get "/useraccess/borrowbook"
 
   get "/useraccess/loginsuccess"
   get "/useraccess/main"
 
   post "/useraccess/borrowbook"
+  get "/bookdbs/login"
 end
