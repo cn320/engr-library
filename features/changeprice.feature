@@ -8,12 +8,12 @@ Scenario: Try to change a price charge or checkout allow
 
   Given I am on the ChargePrice page
 
-  Then I should see "price charge Table"
+  Then I should see "Change New Values"
 
-  When I edit “Bachelor’s Degree row” and “Price Charge column” with “5”
+  When I fill in "Bachelor’s Degree row" and "price" with "5"
 
-  And I press “update”
+  And I press "update"
 
   Then I should be on the ChargePrice page
 
-  And I should see “Bachelor’s Degree row” and “Price Charge column” update to “5”
+  And I should see "Bachelor’s Degree row" and "Price Charge column" update to "5"

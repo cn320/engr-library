@@ -4,11 +4,11 @@ Scenario: Try to make detail to borrow book of student
 
   Given I am on the borrow page
 
-  Then I should see detail of student to borrow book
+  Then I should see "Main page"
 
-  When I fill in "ID BOX" with "studend ID"
+  When I fill in "bid" with "R12345"
 
-  And I press "borrow"
+  And I press "Borrow"
 
-  Then I should see "list of book update"
+  Then I should see "Ruby II"
 

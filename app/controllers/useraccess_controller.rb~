@@ -1,6 +1,6 @@
 class UseraccessController < ApplicationController
 	def index
-		if(session[:studentid] != nil)
+		if(session[:studentid] != nil || session[:user_id])
 			
 		else
 			redirect_to "/bookdbs/index"	
@@ -24,8 +24,9 @@ class UseraccessController < ApplicationController
 	end
 
 	def borrowbook	
-		@test = params[:bid]
+
 		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
+		
 	end
 	
 
