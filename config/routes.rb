@@ -12,6 +12,7 @@ Cn320projectEngrLibrary::Application.routes.draw do
   post "delete/show" 
   post "delete/destroy"
   #get "delete/index"
+
   #resources :delete
   resources :changeprice
 

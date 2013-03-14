@@ -1,5 +1,5 @@
 <h2 align='center'> Search book</h2>
-<form action="delete" method="GET">
+<form action="index" method="GET">
 <table border = 0 align='center'>
   <tr align = "center", align = "center" >
      <th align = "right"> BOOK NAME : </th>
@@ -32,7 +32,7 @@
     <td align='center'><%= book.name %></td>
     <td align='center'><%= book.barcode %></td>
     <td align='center'><%= book.callnum %></td>
-    <td align='center'><%= link_to 'Remove', delete_path(book)%></td>
+    <td align='center'><%= link_to 'Remove', delete_show_path(:id => book)%></td>
   </tr>
 <% end %>
 </table>
