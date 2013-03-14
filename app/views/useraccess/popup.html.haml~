@@ -4,6 +4,6 @@
 </head>
 <body>
 <h2>created successfully. redirecting to login page ....</h2>
-<php echo $_SESSION["studentname"] ?>
+
 </body>
 </html>

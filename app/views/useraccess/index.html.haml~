@@ -1,11 +1,11 @@
 -# Addbook#index
--# Find me in app/views/addbook/index.html.haml
+-# Find me in app/views/useraccess/index.html.haml
 
-%a{:href => 'createnewuser'} Add New Student
+%a{ :href => 'createnewuser' } Add New Student
 
-%h2{:style=>'text-align: center'} Fill In Student ID
+%h3{ :style => 'text-align: center' } Fill In Student ID
 %form{ :controller => 'useraccess', :action => 'accessuser', :method => 'post' }
-  %table{ :border => 0, :width => "100%", :height => "100%" }
+  %table#tablemain{ :align => "center", :border => 0, :width => "50%", :height => "100%" }
     %tr{ :align => "center", :valign => "center" }
       %td
         %label ID STUDENT :

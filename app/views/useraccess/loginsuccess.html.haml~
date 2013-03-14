@@ -3,7 +3,7 @@
 <META HTTP-EQUIV="refresh" CONTENT="5;URL=/useraccess/main">
 </head>
 <body>
-<h2>created successfully. redirecting to login page ....</h2>
-<%=Your session: session[:studentname]%>
+<h2>login successfully. redirecting to main page ....</h2>
+
 </body>
 </html>
