@@ -1,28 +1,27 @@
-
-%h1 Change New Values
+%h1Change New Values
 = form_tag changeprice_path(), :method => :put do
   %table
+    %tr 
+      %td 
+        =label  :title, 'BachelorDegree, Staff'
+      %td
+        =text_field_tag :bac1, 'price'
+      %td
+        =text_field_tag :bac2, 'checkoutdate'
     %tr
       %td
-        =label :bac, :title, 'BachelorDegree, Staff'
+        =label :director, 'Master Degree'
       %td
-        =text_field :bac, 'price'
+        =text_field :mac1, 'price'
       %td
-        =text_field :bac, 'checkoutdate'
+        =text_field :mac2, 'checkoutdate'
     %tr
       %td
-        =label :mac, :director, 'Master Degree'
+        =label :director, 'Professor'
       %td
-        =text_field :mac, 'price'
+        =text_field :pac1, 'price'
       %td
-        =text_field :mac, 'checkoutdate'
+        =text_field :pac2, 'checkoutdate'
     %tr
       %td
-        =label :pac, :director, 'Professor'
-      %td
-        =text_field :pac, 'price'
-      %td
-        =text_field :pac, 'checkoutdate'
-    %tr
-      %td
-        =submit_tag 'submit'
+        =submit_tag 'Update Info'

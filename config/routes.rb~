@@ -7,10 +7,18 @@ Cn320projectEngrLibrary::Application.routes.draw do
   post "/useraccess/main"
   get "bookdbs/index"
 
+<<<<<<< HEAD
+  get "/delete/index"
+  get "delete/show" 
+  post "delete/show" 
+  post "delete/destroy"
+  #get "delete/index"
+=======
   get "delete/index"
   get "delete/show"
-  get "delete/destroy"
+  post "delete/destroy"
 
+>>>>>>> b0f0bce3ec4e0b006bae55fcab4c4a6016b58382
   #resources :delete
   resources :changeprice
 

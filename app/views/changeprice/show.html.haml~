@@ -4,30 +4,30 @@
     %tr
       %td
       %td 
-        =label ค่าปรับ
+        %label ค่าปรับ
       %td 
-        =label จำนวนวันที่ยืมได้
+        %label จำนวนวันที่ยืมได้
     %tr
       %td
         =label :bac, :title, 'BachelorDegree, Staff'
       %td
-        =text_field :bac, 'price'
+        =text_field_tag :bac1, 'price'
       %td
-        =text_field :bac, 'checkoutdate'
+        =text_field_tag :bac2, 'checkoutdate'
     %tr
       %td
         =label :mac, :director, 'Master Degree'
       %td
-        =text_field :mac, 'price'
+        =text_field :mac1, 'price'
       %td
-        =text_field :mac, 'checkoutdate'
+        =text_field :mac2, 'checkoutdate'
     %tr
       %td
         =label :pac, :director, 'Professor'
       %td
-        =text_field :pac, 'price'
+        =text_field :pac1, 'price'
       %td
-        =text_field :pac, 'checkoutdate'
+        =text_field :pac2, 'checkoutdate'
     %tr
       %td
-        =submit_tag 'Update Movie Info'
+        =submit_tag 'Update Info'

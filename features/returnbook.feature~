@@ -6,24 +6,29 @@ Feature: I can return a book
 
   And check charge price in case of overdue
 
-Background:
+Scenario: Return a book
 
   Given I am on the borrowreturnpage
 
-  Then I should see "หนังสือที่ยืม"
+<<<<<<< HEAD
+  Then I should see "Main page"
+Feature: I can return a book
+=======
+  Then I should see "Borrowed Book"
+>>>>>>> b0f0bce3ec4e0b006bae55fcab4c4a6016b58382
 
-  And I should see "Red Riding Hood And Wonderland" in table
+  As an administrator
 
-  When I check a "Return_Checkbox in row of Red Riding Hood And Wonderland"
+  I want to return a book
 
-  And I press "Return"
+  And check charge price in case of overdue
 
-  Then I should not see "Red Riding Hood And Wonderland" in table
+Scenario: Return a book
 
-Scenario: return a book without charge
+  Given I am on the borrowreturnpage
 
-  I should see message “Book Returns Success” over the “Borrowed Book Table”
+  Then I should see "Main page"
 
-Scenario: return a book with charge
+  When I press a "Remove"
 
-  I should see message “Charge Price is 30 baths. Thank you.” over the “Borrowed Book Table”
+  Then I should not see "JAVA"
