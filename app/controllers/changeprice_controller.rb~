@@ -7,10 +7,10 @@ class ChangepriceController < ApplicationController
   end
   
   def show
-       # if(Changeprice.find(1) != nil)
-	#  @bac = Changeprice.find(1)
-	#  @mac = Changeprice.find(2)
-	#  @pac = Changeprice.find(3)
+        #if(Changeprice.find(1) != nil)
+	 # @bac = Changeprice.find(1)
+	  #@mac = Changeprice.find(2)
+	  #@pac = Changeprice.find(3)
  	#else
 	  @bac = Changeprice.create(:id=>'1',:type=>'Bachelor',:checkoutdate=>'0',:price=>'0')
 	  @mac = Changeprice.create(:id=>'2',:type=>'Master',:checkoutdate=>'0',:price=>'0')

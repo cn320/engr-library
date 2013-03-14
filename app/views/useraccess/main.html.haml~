@@ -11,7 +11,7 @@
 
 %h4{:style=>'text-decoration: underline;'} ยืมหนังสือ
 
-%form{ :controller => 'useraccess', :action => 'borrowbook', :method => 'GET' }
+%form{ :controller => 'useraccess', :action => 'borrowbook', :method => 'get' }
   %table{ :border => 0, :width => "100%", :height => "100%" }
     %tr{ :align => "center", :valign => "center" }
       %td

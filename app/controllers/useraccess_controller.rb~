@@ -34,27 +34,23 @@ class UseraccessController < ApplicationController
 		end
 
 		if(session[:studentid] != nil)
-		   #session[:studentid] = '2222'
 		   @stuid = session[:studentid]
 		   session[:studentidmain] = session[:studentid]
 		   @status = Borrowreturn.find(:all , :conditions =>{:studentid => session[:studentid]})
-		   #@status = Borrowreturn.find(:all , :conditions =>{:studentid => 0})
 		   
 		   # Calculate Fee
 		   @status.each do |temp|
-		     #temp.fee = Borrowreturn.calculatefee(0,temp.duedate)
 		     temp.fee = Borrowreturn.calculatefee(session[:studentid],temp.duedate) 
 		  end
 		else
-		   session[:studentida] = '111111'
-		   @stuid = session[:studentida]
-		   @status = Borrowreturn.find(:all , :conditions =>{:studentid => 0})
+		   @stuid = session[:studentid]
+		   @status = Borrowreturn.find(:all , :conditions =>{:studentid => @stuid})
     		end	
 	end
 
 	def checknewstudent
 		if(!Userlist.find_by_stucolid(params[:stuid]))
-    		 @newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname])
+    		 @newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname],:status=>params[:typeid])
     		flash[:notice] = "#{@newacc.name} added"
     		redirect_to "/useraccess/popup" # The popup is message to user 
     		else

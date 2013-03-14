@@ -1,12 +1,8 @@
 <html>
 <head>
-<META HTTP-EQUIV="refresh" CONTENT="10;URL=/useraccess/main">
+<META HTTP-EQUIV="refresh" CONTENT="2;URL=/useraccess/main">
 </head>
 <body>
-<h2>created successfully. redirecting to login page ....</h2>
-Your session22222: 
-=session[:studentid]
-=@stuid
-=@test
+<h2>%lable @newborrow</h2>
 </body>
 </html>
