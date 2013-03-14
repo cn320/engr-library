@@ -16,4 +16,11 @@
         =text_field_tag :stuid, params[:stuid]
     %tr{ :align => "center", :valign => "center" }
       %td
+        %label ประเภทของผู้ใช้ :
+        =text_field_tag :typeid, params[:typeid]
+    %tr{ :align => "center", :valign => "center" }
+      %td
         %input{ :type => "submit", :name => "submit", :value => "create" }
+
+%h4{:style=>'text-align: center'} ประเภทของผู้ใช้ให้ใส่หมายเลขดังนี้
+%h4 1 = Bachelor'Degree or Staff, 2 = Master Degree, 3 = Professor

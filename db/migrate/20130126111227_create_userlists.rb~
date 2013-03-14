@@ -1,7 +1,7 @@
 class CreateUserlists < ActiveRecord::Migration
   def change
     create_table :userlists do |t|
-      t.integer :id
+      t.integer :stucolid
       t.string :name
       t.string :surname
 

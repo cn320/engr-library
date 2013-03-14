@@ -1,6 +1,12 @@
 %h1 Change New Values
-= form_tag changeprice_path(@bac), :method => :put do
+= form_tag changeprice_path(), :method => :put do
   %table
+    %tr
+      %td
+      %td 
+        =label ค่าปรับ
+      %td 
+        =label จำนวนวันที่ยืมได้
     %tr
       %td
         =label :bac, :title, 'BachelorDegree, Staff'

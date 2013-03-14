@@ -20,7 +20,7 @@ class Borrowreturn < ActiveRecord::Base
 
 	def Borrowreturn.calculatefee(stuid,duedateTime)
 		userid = Userlist.find_by_stucolid(stuid)
- 		userstatus = userid.status
+ 		userstatus = userid.staus
 
 		presentTime = Time.now
 		if(duedateTime >= presentTime)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311085007) do
+ActiveRecord::Schema.define(:version => 20130313062216) do
 
   create_table "adminlists", :force => true do |t|
     t.string "username"
@@ -58,5 +58,4 @@ ActiveRecord::Schema.define(:version => 20130311085007) do
     t.string  "surname"
     t.integer "status"
   end
-
 end

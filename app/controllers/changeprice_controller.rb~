@@ -1,9 +1,21 @@
 class ChangepriceController < ApplicationController
   
   def index
-	@bac = Changeprice.find(1)
-	@mac = Changeprice.find(2)
-	@pac = Changeprice.find(3)
+	  @bac = Changeprice.find(1)
+	  @mac = Changeprice.find(2)
+	  @pac = Changeprice.find(3)
+  end
+  
+  def show
+        if(Changeprice.find(1) != nil)
+	  @bac = Changeprice.find(1)
+	  @mac = Changeprice.find(2)
+	  @pac = Changeprice.find(3)
+ 	else
+	  @bac = Changeprice.create(:id=>'1',:type=>'Bachelor',:checkoutdate=>'0',:price=>'0')
+	  @mac = Changeprice.create(:id=>'2',:type=>'Master',:checkoutdate=>'0',:price=>'0')
+	  @pac = Changeprice.create(:id=>'3',:type=>'Professor',:checkoutdate=>'0',:price=>'0')
+	end
   end
 
   def update
