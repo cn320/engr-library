@@ -29,6 +29,24 @@ div {
   margin: 0;
   padding: 0 20px 20px;
 }
+h1 {
+  color: blue;
+  font-size: 150%;
+  font-style: italic;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid DarkSlateGrey;
+  border-bottom-style: groove;
+}
+h1.title {
+  margin: 0 0 1em;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border-bottom: 4px solid gold;
+  font-size: 2em;
+  font-style: normal;
+}
 input {
 background: #fff;
 background: -moz-linear-gradient(top, #fff 0%, #d5e9f6 100%);

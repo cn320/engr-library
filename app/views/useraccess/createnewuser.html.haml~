@@ -1,7 +1,7 @@
 -# Find me in app/views/useraccess/createnewuser.html.haml
 %h2{:style=>'text-align: center'} Create New Student
 %form{ :controller => 'useraccess', :action => 'checknewstudent', :method => 'post' }
-  %table{ :border => 0, :width => "100%", :height => "100%" }
+  %table#tablemain{ :border => 0, :width => "50%", :height => "100%" }
     %tr{ :align => "center", :valign => "center" }
       %td
         %label Name :

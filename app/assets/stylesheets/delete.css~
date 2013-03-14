@@ -33,18 +33,18 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
-table-deletes {
+#tabledeletes {
 	border: 1px solid #e3e3e3;
 	background-color: #f2f2f2;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 }
-table-deletes td,-deletes th {
+#tabledeletes td,#tabledeletes th {
 	padding: 5px;
 	color: #333;
 }
-table-deletes th {
+#tabledeletes th {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding: .2em 0 .2em .5em;
 	text-align: left;
@@ -54,7 +54,7 @@ table-deletes th {
 	background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
 	border-bottom: solid 1px #999;
 }
-table-deletes th {
+#tabledeletes th {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 17px;
 	line-height: 20px;
@@ -63,7 +63,7 @@ table-deletes th {
 	text-align: center;
 	text-shadow: white 1px 1px 1px;
 }
-table-books td {
+#tabledeletes td {
 	line-height: 20px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
@@ -71,7 +71,7 @@ table-books td {
 	border-top: 1px solid #fff;
 	text-align: left;
 }
-table-deletes td:hover {
+#tabledeletes td:hover {
 	background-color: #fff;
 }
 #notice, #warning {

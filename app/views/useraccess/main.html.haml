@@ -1,5 +1,30 @@
 %a{:href => '/bookdbs/logout'} Log out
 %h2{:style=>'text-align: center'} Main page
+<<<<<<< HEAD
+
+%table
+  %tr
+    %td
+      %lable ชื่อ-นามสกุล :
+    %td
+    %td
+      =session[:studentname]
+  %tr
+    %td
+      %lable เลขประจำตัวนักศึกษา :
+    %td
+    %td
+      =session[:studentid]
+
+%table#tablemain{ :align => "center", :border => 0, :width => "50%", :height => "100%" }
+  %tr{ :align => "center", :valign => "center" }
+    %td
+      %label ID STUDENT :
+      =text_field_tag :studentids, params[:studentids]
+  %tr{ :align => "center", :valign => "center" }
+    %td
+      %input{ :type => "submit", :name => "submit", :value => "Login" }
+=======
 =session
 %lable ชื่อ-นามสกุล :
 =session[:studentname]
@@ -49,3 +74,4 @@
       %td= user.barcode
       %td= user.fee
       %td= button_to "Remove", :controller=>"useraccess",:action => "main",:id => user.id, :method => :delete
+>>>>>>> 8016fa5cccca1a990df98b23690c290bd0a482af
