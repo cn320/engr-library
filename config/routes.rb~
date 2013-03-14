@@ -20,6 +20,8 @@ Cn320projectEngrLibrary::Application.routes.draw do
   get "/bookdbs/useraccess"
   get "/bookdbs/logout"
 
+  get "/useraccess/accessuser"
+
   get "/addbook/popup"
   post "/addbook/createnewbook"
   get "/addbook/error"

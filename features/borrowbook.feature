@@ -8,7 +8,7 @@ Scenario: Try to make detail to borrow book of student
 
   When I fill in "bid" with "R12345"
 
-  And I press "Borrow"
+  And I press a "Borrow"
 
-  Then I should see "Ruby II"
+  Then I should see JAVA
 

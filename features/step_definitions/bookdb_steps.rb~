@@ -2,6 +2,14 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+When /^(?:|I )am exists (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
+When /^(?:|I )fill box in "([^"]*)" with (.+)$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
@@ -27,7 +35,6 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
-  session[:studentid] = 5210611454
   regexp = Regexp.new(regexp)
 
   if page.respond_to? :should

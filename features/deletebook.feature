@@ -21,9 +21,3 @@ Scenario: Try to delete a book list
   When I press a "Remove"
 
   Then I should be a on the book details page 
-
-  Then I press "Delete"
-
-  Then I should be on the DeleteBookPage
-
-  And I should see "OOP in PHP was deleted"

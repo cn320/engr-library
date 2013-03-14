@@ -10,10 +10,9 @@ Scenario: Try to change a price charge or checkout allow
 
   Then I should see "Change New Values"
 
-  When I fill in "Bachelor’s Degree row" and "price" with "5"
+  When I fill in "bac1" with "100"
 
-  And I press "update"
+  And I press "Update Info"
 
-  Then I should be on the ChargePrice page
+  Then I am exists the ChargePrice page
 
-  And I should see "Bachelor’s Degree row" and "Price Charge column" update to "5"
