@@ -11,10 +11,11 @@ module NavigationHelpers
 	
 	when /^the AddBookpage/ then '/addbook/index'	
 	when /^the Popup page/ then '/addbook/popup'
-	when /^the DeleteBookPage/ then '/bookdbs/index'
+	when /^the DeleteBookPage/ then '/delete/index'
+	when /^the book details page/ then '/delete/index'
 	when /^the borrowreturnpage/ then '/bookdbs/index'
 	when /^the ChargePrice page/ then '/bookdbs/index'
-    when /^the borrow page/ then '/bookdbs/index'
+        when /^the borrow page/ then '/bookdbs/index'
 
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'
