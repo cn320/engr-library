@@ -90,7 +90,7 @@ table th {
 	padding: .2em 0 .2em .5em;
 	text-align: left;
 	color: #FF5E00;
-	background-color: #3E91FD;
+	background-color: #CC99FF;
 	border-bottom: solid 1px #999;
 }
 table th {
