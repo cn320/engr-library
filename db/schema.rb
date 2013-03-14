@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20130311085007) do
     t.integer "stucolid"
     t.string  "name"
     t.string  "surname"
+    t.integer "status"
   end
 
 end

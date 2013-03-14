@@ -9,15 +9,11 @@ class Borrowreturn < ActiveRecord::Base
 		#strtime = time.strftime("%d-%m-%Y")
 		strtime = DateTime.now	
 	
-		# Calculate Change PRICE
- 		# check type of User
-		#if(stuid > 521)
-		#  typeid = '1' #Bachelor
-		#else
-		#  typeid = '2'
-		#end 
+		# Calculate PRICE check
+		userid = Userlist.find_by_stucolid(stuid)
+ 		userstatus = userid.status
 
-		strduedate = time  - (Changeprice.find_by_id(1).checkoutdate*3600*24)
+		strduedate = time  - (Changeprice.find_by_id(userstatus).checkoutdate*3600*24)
 		#duedate = time + (24*60*60)
 		#strduedate = duedate.strftime("%d-%m-%Y")
 		Borrowreturn.create!(:studentid=>stuidi,:bookname=>bname,:borrowdate=>strtime,:duedate=>strduedate,:bookid=>bid,:barcode=>bbarcode,:fee=>0)
@@ -39,8 +35,9 @@ class Borrowreturn < ActiveRecord::Base
 		  0
 		else
 		  #showfee = ((presentTime - duedateTime) / 3600*24) * Changeprice.find_by_id(1).price
-		  #x = presentTime
-		  x = ((duedateTime - presentTime) / 3600*24) * Changeprice.find_by_id(1).price
+		  #x = ((presentTime.to_i - duedateTime.to_i) / 3600*24 ).to_i
+		  #x = ((presentTime.to_i - duedateTime.to_i) / 3600*24) * Changeprice.find_by_id(1).price
+		  x =presentTime.strftime("%d")
 		end
 		  
 	end

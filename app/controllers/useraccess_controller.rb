@@ -19,13 +19,6 @@ class UseraccessController < ApplicationController
 	end
 
 	def borrowbook	
-		session[:studentid] = session[:studentidmain]
-		if(session[:studentid] == nil)
-    		  @stuid = '333333'
-		else
-		  #@stuid = session[:studentidmain]
-		  @stuid = '44444'
-		end
 		@test = params[:bid]
 		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
 		#redirect_to "/useraccess/loginsuccess"
@@ -44,13 +37,14 @@ class UseraccessController < ApplicationController
 		   #session[:studentid] = '2222'
 		   @stuid = session[:studentid]
 		   session[:studentidmain] = session[:studentid]
-		   #@books = Borrowreturn.find(:all , :conditions =>{:studentid => session[:studentid]})
-		   @status = Borrowreturn.find(:all , :conditions =>{:studentid => 0})
+		   @status = Borrowreturn.find(:all , :conditions =>{:studentid => session[:studentid]})
+		   #@status = Borrowreturn.find(:all , :conditions =>{:studentid => 0})
 		   
 		   # Calculate Fee
 		   @status.each do |temp|
-		     temp.fee = Borrowreturn.calculatefee(0,temp.duedate)
-		   end
+		     #temp.fee = Borrowreturn.calculatefee(0,temp.duedate)
+		     temp.fee = Borrowreturn.calculatefee(session[:studentid],temp.duedate) 
+		  end
 		else
 		   session[:studentida] = '111111'
 		   @stuid = session[:studentida]
@@ -60,7 +54,7 @@ class UseraccessController < ApplicationController
 
 	def checknewstudent
 		if(!Userlist.find_by_stucolid(params[:stuid]))
-    		 @newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname])
+    		 @newacc = Userlist.create!(:stucolid=>params[:stuid],:name=>params[:stuname],:surname=>params[:stusurname],:status=>params[:typeid])
     		flash[:notice] = "#{@newacc.name} added"
     		redirect_to "/useraccess/popup" # The popup is message to user 
     		else

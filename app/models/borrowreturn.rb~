@@ -9,13 +9,18 @@ class Borrowreturn < ActiveRecord::Base
 		#strtime = time.strftime("%d-%m-%Y")
 		strtime = DateTime.now	
 	
-		# Calculate Change PRICE
- 		# check type of User
-		#if(stuid > 521)
-		#  typeid = '1' #Bachelor
-		#else
-		#  typeid = '2'
-		#end 
+		# Calculate PRICE check
+		
+ 		# type of User if
+		#stuid(521 > typeid)
+		#  1 = 'Bachelor' #else
+		#typeid
+		#  2 = 'end'
+		#Create 
+
+		# New Table usertemp
+		Userlist = find.by_stucolid_Change(stuid)
+		x = usertemp.type # is integer
 
 		strduedate = time  - (Changeprice.find_by_id(1).checkoutdate*3600*24)
 		#duedate = time + (24*60*60)
@@ -39,8 +44,9 @@ class Borrowreturn < ActiveRecord::Base
 		  0
 		else
 		  #showfee = ((presentTime - duedateTime) / 3600*24) * Changeprice.find_by_id(1).price
-		  #x = presentTime
-		  x = duedateTime - presentTime
+		  #x = ((presentTime.to_i - duedateTime.to_i) / 3600*24 ).to_i
+		  #x = ((presentTime.to_i - duedateTime.to_i) / 3600*24) * Changeprice.find_by_id(1).price
+		  x =presentTime.strftime("%d")
 		end
 		  
 	end
