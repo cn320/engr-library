@@ -24,8 +24,9 @@ class UseraccessController < ApplicationController
 	end
 
 	def borrowbook	
-		@test = params[:bid]
+
 		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
+		
 	end
 	
 

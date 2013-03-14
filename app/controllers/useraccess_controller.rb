@@ -24,8 +24,9 @@ class UseraccessController < ApplicationController
 	end
 
 	def borrowbook	
-		@test = params[:bid]
+
 		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
+		
 	end
 	
 
@@ -39,7 +40,7 @@ class UseraccessController < ApplicationController
 	    		   	redirect_to "/useraccess/main"
 			end
 
-			if(session[:studentid] != nil)
+			if(session[:studentid] != nil && @status != nil)
 			   	@stuid = session[:studentid]
 			   	@status = Borrowreturn.find(:all , :conditions =>{:studentid => session[:studentid]})
 			   

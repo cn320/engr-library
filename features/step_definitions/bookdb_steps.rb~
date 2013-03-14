@@ -27,6 +27,7 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
+  session[:studentid] = 5210611454
   regexp = Regexp.new(regexp)
 
   if page.respond_to? :should
@@ -56,4 +57,9 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
     assert page.has_no_content?(text)
   end
 end
+
+
+
+
+
 
