@@ -24,11 +24,8 @@ class UseraccessController < ApplicationController
 	end
 
 	def borrowbook	
-
 		@newborrow = Borrowreturn.add(params[:bid],session[:studentid])
-		
 	end
-	
 
 	def main
 		@status = Borrowreturn.find(:all , :conditions =>{:studentid => 1})

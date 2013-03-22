@@ -24,8 +24,8 @@ class ChangepriceController < ApplicationController
 
   def update
 	    @bachelor = Changeprice.find(1) 
-	    @bachelor.update_attributes!(:price => params[:bac1])
-	    @bachelor.update_attributes!(:checkoutdate => params[:bac2])
+	    @bachelor.update_attributes!(params[:bac1])
+	    @bachelor.update_attributes!(params[:bac2])
 	    @master = Changeprice.find(2) 
 	    @master.update_attributes!(params[:mac1])
 	    @master.update_attributes!(params[:mac2])

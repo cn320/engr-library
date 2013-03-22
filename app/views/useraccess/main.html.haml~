@@ -1,11 +1,7 @@
 %a{:href => '/bookdbs/logout'} Log out
-<<<<<<< HEAD
 
 %h2{:style=>'text-align: center'} Main page
 
-=======
-<<<<<<< HEAD
->>>>>>> 8a51ad0b9614a4cdb85836d871b0140cb93a4bd4
 %br
 
 %lable ชื่อ-นามสกุล :
@@ -14,26 +10,6 @@
 <br>
 %lable เลขประจำตัวนักศึกษา :
 =session[:studentid]
-<<<<<<< HEAD
-=======
-=======
-%h2{:style=>'text-align: center'} Main page
-
-
-%table
-  %tr
-    %td
-      %lable ชื่อ-นามสกุล :
-    %td
-      =session[:studentname]
-  %tr
-    %td
-      %lable เลขประจำตัวนักศึกษา :
-    %td
-      =session[:studentid]
-
->>>>>>> dc2f6f222176c78e0c592e5e577645ef13cf49d2
->>>>>>> 8a51ad0b9614a4cdb85836d871b0140cb93a4bd4
 
 %h4{:style=>'text-decoration: underline;'} ยืมหนังสือ
 
@@ -55,17 +31,17 @@
     %tr{ :align => "center", :valign => "center" }
       %th
         %label ชื่อหนังสือ
-      %td
+      %th
         %label วันที่ยืม
-      %td
+      %th
         %label วันที่ต้องคืน
-      %td
+      %th
         %label รหัสหนังสือ
-      %td
+      %th
         %label บาร์โค้ด
-      %td
+      %th
         %label ค่าปรับ
-      %td
+      %th
         %label คืน
 
   %tbody
@@ -90,8 +66,3 @@
           %td= user.barcode
           %td= user.fee
           %td= button_to "Remove", :controller=>"useraccess",:action => "main",:id => user.id, :method => :delete
-<<<<<<< HEAD
-=======
-
->>>>>>> dc2f6f222176c78e0c592e5e577645ef13cf49d2
->>>>>>> 8a51ad0b9614a4cdb85836d871b0140cb93a4bd4
