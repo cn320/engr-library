@@ -1,5 +1,0 @@
--# Addbook#index
--# Find me in app/views/useraccess/index.html.haml
-
-%p = session[:testid]
-

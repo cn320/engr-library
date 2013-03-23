@@ -1,9 +1,0 @@
-%h1 SAME BOOK!!
-<html>
-<head>
-<META HTTP-EQUIV="refresh" CONTENT="5;URL=/addbook/index">
-</head>
-<body>
-<h1 align = 'center'> Book already exist. </h1>
-</body>
-</html>
